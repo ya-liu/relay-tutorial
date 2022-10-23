@@ -10883,7 +10883,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"relay-runtime@npm:14.1.0":
+"relay-runtime@npm:14.1.0, relay-runtime@npm:^14.1.0":
   version: 14.1.0
   resolution: "relay-runtime@npm:14.1.0"
   dependencies:
@@ -10908,6 +10908,7 @@ __metadata:
     react-relay: ^14.1.0
     react-scripts: 5.0.1
     relay-compiler: ^14.1.0
+    relay-runtime: ^14.1.0
     web-vitals: ^2.1.0
   languageName: unknown
   linkType: soft

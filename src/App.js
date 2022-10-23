@@ -1,9 +1,18 @@
 // your-app-name/src/App.js
 import React from 'react';
+// import { graphql } from 'react-relay';
 import './App.css';
 import fetchGraphQL from './fetchGraphQL';
 
 const { useState, useEffect } = React;
+
+// const appQuery = graphql`
+//   query RepositoryNameQuery {
+//     repository(owner: "ya-liu" name: "relay-tutorial") {
+//       name
+//     }
+//   }
+// `
 
 function App() {
   // We'll load the name of a repository, initially setting it to null
