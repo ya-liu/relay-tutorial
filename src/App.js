@@ -7,8 +7,13 @@ import {
   usePreloadedQuery,
 } from 'react-relay/hooks';
 import RelayEnvironment from './RelayEnvironment';
+import {AppRepositoryNameQuery} from './__generated__/AppRepositoryNameQuery.graphql'
 
 const { Suspense } = React;
+
+type Props = {
+  appQueryRef: PreloadedQuery<AppRepositoryNameQuery>
+}
 
 // Define a query
 const RepositoryNameQuery = graphql`
@@ -33,7 +38,7 @@ const preloadedQuery = loadQuery(RelayEnvironment, RepositoryNameQuery, {
 //   fallback.
 // - If the query failed, it throws the failure error. For simplicity we aren't
 //   handling the failure case here.
-function App(props) {
+function App(props: Props) {
   const data = usePreloadedQuery(RepositoryNameQuery, props.preloadedQuery);
 
   return (
