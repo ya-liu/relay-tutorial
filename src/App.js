@@ -1,19 +1,19 @@
-import React from 'react';
-import './App.css';
-import graphql from 'babel-plugin-relay/macro';
+import React from "react";
+import "./App.css";
+import graphql from "babel-plugin-relay/macro";
 import {
   RelayEnvironmentProvider,
   loadQuery,
   usePreloadedQuery,
-} from 'react-relay/hooks';
-import RelayEnvironment from './RelayEnvironment';
-import {AppRepositoryNameQuery} from './__generated__/AppRepositoryNameQuery.graphql'
+} from "react-relay/hooks";
+import RelayEnvironment from "./RelayEnvironment";
+import { AppRepositoryNameQuery } from "./__generated__/AppRepositoryNameQuery.graphql";
 
 const { Suspense } = React;
 
 type Props = {
-  appQueryRef: PreloadedQuery<AppRepositoryNameQuery>
-}
+  appQueryRef: PreloadedQuery<AppRepositoryNameQuery>,
+};
 
 // Define a query
 const RepositoryNameQuery = graphql`
@@ -58,7 +58,7 @@ function App(props: Props) {
 function AppRoot(props) {
   return (
     <RelayEnvironmentProvider environment={RelayEnvironment}>
-      <Suspense fallback={'Loading...'}>
+      <Suspense fallback={"Loading..."}>
         <App preloadedQuery={preloadedQuery} />
       </Suspense>
     </RelayEnvironmentProvider>
